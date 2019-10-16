@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/10/15 16:12:04 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/10/16 10:54:38 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,31 @@ ft_putnbr.c \
 ft_bzero.c \
 ft_memcpy.c \
 ft_memccpy.c \
-
+ft_memmove.c \
+ft_memchr.c \
+ft_memcmp.c \
+ft_strdup.c \
+ft_strcpy.c \
+ft_strncpy.c \
+ft_strcat.c \
+ft_strncat.c \
+ft_strlcat.c \
+ft_strchr.c \
+ft_strrchr.c \
+ft_strstr.c \
+ft_strnstr.c \
+ft_strcmp.c \
+ft_strncmp.c \
+ft_atoi.c \
+ft_isalpha.c \
+ft_isdigit.c \
+ft_isalnum.c \
+ft_isascii.c \
+ft_isprint.c \
+ft_toupper.c \
+ft_isspace.c \
+ft_isupper.c \
+ft_islower.c
 OBJECTS	= $(SOURCE_LIST:.c=.o)
 
 all: $(NAME)

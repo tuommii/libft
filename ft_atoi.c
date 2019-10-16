@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 14:34:08 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 10:54:10 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/10/16 09:33:51 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/10/16 10:53:40 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nbr)
+int	ft_atoi(const char *str)
 {
-	if (nbr < 0)
+	int res;
+	int sign;
+
+	sign = 1;
+	res = 0;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-')
 	{
-		ft_putchar('-');
-		if (nbr == -2147483648)
-		{
-			ft_putchar('2');
-			ft_putnbr(147483648);
-			return ;
-		}
-		nbr = -nbr;
+		sign = -1;
+		str++;
 	}
-	if (nbr > 9)
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
 	{
-		ft_putnbr(nbr / 10);
+		res = (res * 10) + (*str - '0');
+		str++;
 	}
-	ft_putchar(nbr % 10 + '0');
+	return (sign * res);
 }

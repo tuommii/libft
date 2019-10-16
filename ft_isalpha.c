@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 14:34:08 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 10:54:10 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/10/16 09:41:37 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/10/16 10:53:49 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr(int nbr)
+int	ft_isalpha(int c)
 {
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		if (nbr == -2147483648)
-		{
-			ft_putchar('2');
-			ft_putnbr(147483648);
-			return ;
-		}
-		nbr = -nbr;
-	}
-	if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-	}
-	ft_putchar(nbr % 10 + '0');
+	if (c > 64 && c < 91)
+		return (1);
+	else if (c > 96 && c < 123)
+		return (1);
+	return (0);
 }

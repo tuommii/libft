@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/15 14:34:08 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 10:54:10 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/10/16 09:19:55 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/10/16 10:54:28 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr(int nbr)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	if (nbr < 0)
+	int i;
+	int j;
+
+	if (*needle == '\0')
+		return ((char *)haystack);
+	i = 0;
+	while (haystack[i] != '\0')
 	{
-		ft_putchar('-');
-		if (nbr == -2147483648)
+		j = 0;
+		while (haystack[i + j] == needle[j])
 		{
-			ft_putchar('2');
-			ft_putnbr(147483648);
-			return ;
+			j++;
+			if (needle[j] == '\0')
+				return ((char *)&haystack[i]);
 		}
-		nbr = -nbr;
+		i++;
 	}
-	if (nbr > 9)
-	{
-		ft_putnbr(nbr / 10);
-	}
-	ft_putchar(nbr % 10 + '0');
+	return (0);
 }
