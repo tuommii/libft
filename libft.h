@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 21:12:09 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 21:18:32 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ typedef struct s_list
 }					t_list;
 
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelalone(t_list **alst, void (*del)(void*, size_t));
 
 #endif
