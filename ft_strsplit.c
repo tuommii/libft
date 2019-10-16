@@ -6,48 +6,88 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:59:10 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 15:24:35 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 20:38:21 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // gcc ft_strsplit.c -L ~/Hive/libft -o main
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
+
+static int ft_split_count(char const *s, char c)
+{
+	int	strings;
+	int i;
+
+	i = 0;
+	strings = 0;
+	while (s[i])
+	{
+		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
+			strings++;
+		i++;
+	}
+	// Ehkä ehto jos eka kirjain on '\0'
+	return (strings);
+}
+
+static int ft_char_count(char const *s, char c)
+{
+	int count;
+
+	count = 0;
+	while (*s)
+	{
+		if (*s != c)
+			count++;
+		s++;
+	}
+	return (count);
+}
 
 char	**ft_strsplit(char const *s, char c)
 {
-	int len;
-	int count;
 	int i;
 	int j;
+	char **splits;
 
-	while (*(s++))
+	i = 0;
+	j = 0;
+	if (!s || !c || (!(splits = (char **)malloc(sizeof(char *) * ft_split_count(s, c) + 1))))
+		return (NULL);
+	while (*s)
 	{
-		if (*s == c)
+		while (*s == c && *s)
+			s++;
+		if (*s != c && *s)
 		{
-			count++;
-			len++;
+			if (!s || (!(splits[i] = (char *)malloc(sizeof(char) * ft_char_count(s, c) + 1))))
+				return (NULL);
+			while (*s != c && *s)
+				splits[i][j++] = (char)*s++;
+			splits[i][j] = '\0';
+			i++;
+			j = 0;
 		}
 	}
-	s = s - (len + 1);
-	char **array = (char **)malloc(sizeof(char *) * (len + 1));
+	splits[i] = NULL;
+	return (splits);
 }
 
 int main(void)
 {
-	char *test = "*hello*fellow***students*";
-	char **res = ft_strsplit(test, '*');
+	char *test = "*he*fe***st*a*";
+	char **arr;
+	printf("%d\n", ft_split_count(test, '*'));
+	printf("%d\n", ft_char_count(test, '*'));
+	arr = ft_strsplit(test, '*');
 	int i = 0;
-	int j;
-	while (res[i])
+	while (i < 4)
 	{
-		j = 0;
-		while (res[i][j])
-		{
-			printf("%c", res[i][j]);
-			j++;
-		}
-		i++;;
+		printf("%s\n", arr[i]);
+		i++;
 	}
+	return (0);
 }
