@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/10/16 17:02:20 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/10/16 21:07:10 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,8 +67,9 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_toupper.c \
 ft_tolower.c \
-ft_itoa.c
-#ft_strsplit.c
+ft_itoa.c \
+ft_strsplit.c \
+ft_lstnew.c
 
 OBJECTS	= $(SOURCE_LIST:.c=.o)
 

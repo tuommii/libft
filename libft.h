@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 20:50:25 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 21:12:09 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int		ft_islower(int c);
 typedef struct s_list
 {
 	void			*content;
-	size_t			*content_size;
+	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 

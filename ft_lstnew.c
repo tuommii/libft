@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 20:50:38 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 21:06:20 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 21:12:16 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *node;
 
-	if (!(node = (t_list *)malloc(sizeof(*node))));
+	if (!(node = (t_list *)malloc(sizeof(*node))))
 		return (NULL);
 	if (content == NULL)
 	{

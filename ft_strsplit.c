@@ -6,13 +6,10 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:59:10 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 20:39:29 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 21:07:57 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// gcc ft_strsplit.c -L ~/Hive/libft -o main
-
-#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
@@ -73,20 +70,4 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	splits[i] = NULL;
 	return (splits);
-}
-
-int main(void)
-{
-	char *test = "*he*fe***st*a*";
-	char **arr;
-	printf("%d\n", ft_split_count(test, '*'));
-	printf("%d\n", ft_char_count(test, '*'));
-	arr = ft_strsplit(test, '*');
-	int i = 0;
-	while (i < 4)
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-	return (0);
 }
