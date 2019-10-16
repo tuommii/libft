@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 16:04:18 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 20:50:25 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,14 @@ char	*ft_itoa(int n);
 int		ft_isspace(char c);
 int		ft_isupper(int c);
 int		ft_islower(int c);
+
+typedef struct s_list
+{
+	void			*content;
+	size_t			*content_size;
+	struct s_list	*next;
+}					t_list;
+
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 #endif
