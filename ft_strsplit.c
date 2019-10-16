@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:59:10 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 20:38:21 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 20:39:29 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static int ft_split_count(char const *s, char c)
 			strings++;
 		i++;
 	}
-	// Ehkä ehto jos eka kirjain on '\0'
 	return (strings);
 }
 
