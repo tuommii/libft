@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 13:40:25 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:04:18 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 # define FT_MIN(x, y) (x) < (y) ? (x) : (y)
 # define FT_MAX(x, y) (x) > (y) ? (x) : (y)
+# define ABS(Value)  (Value < 0) ? -Value:Value
 # define FALSE 0
 # define TRUE 1
 
@@ -69,6 +70,12 @@ char	*ft_strtrim(char const *s);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putnbr(int nbr);
+void	ft_putendl(char const *s);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
 
 int		ft_isspace(char c);
 int		ft_isupper(int c);

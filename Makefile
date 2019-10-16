@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/10/16 13:59:01 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/10/16 15:46:03 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,12 +60,13 @@ ft_strnequ.c \
 ft_strsub.c \
 ft_strjoin.c \
 ft_strtrim.c \
-ft_strsplit.c
-#ft_stritoa.c \
-#ft_putchar_fd.c \
-#ft_putstr_fd.c \
-#ft_putendl_fd.c \
-#ft_putnbr_fd.c
+ft_putendl.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c \
+ft_putendl_fd.c \
+ft_putnbr_fd.c \
+ft_itoa.c
+#ft_strsplit.c
 
 OBJECTS	= $(SOURCE_LIST:.c=.o)
 
