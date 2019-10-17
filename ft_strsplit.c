@@ -6,14 +6,13 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:59:10 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 21:07:57 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/17 07:42:09 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
-static int ft_split_count(char const *s, char c)
+static int	sc(char const *s, char c)
 {
 	int	strings;
 	int i;
@@ -26,10 +25,12 @@ static int ft_split_count(char const *s, char c)
 			strings++;
 		i++;
 	}
+	if (s[0] != '\0')
+		strings++;
 	return (strings);
 }
 
-static int ft_char_count(char const *s, char c)
+static int	cc(char const *s, char c)
 {
 	int count;
 
@@ -43,15 +44,15 @@ static int ft_char_count(char const *s, char c)
 	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	int i;
-	int j;
-	char **splits;
+	int		i;
+	int		j;
+	char	**a;
 
 	i = 0;
 	j = 0;
-	if (!s || !c || (!(splits = (char **)malloc(sizeof(char *) * ft_split_count(s, c) + 1))))
+	if (!s || !c || (!(a = (char **)malloc(sizeof(char *) * sc(s, c) + 1))))
 		return (NULL);
 	while (*s)
 	{
@@ -59,15 +60,15 @@ char	**ft_strsplit(char const *s, char c)
 			s++;
 		if (*s != c && *s)
 		{
-			if (!s || (!(splits[i] = (char *)malloc(sizeof(char) * ft_char_count(s, c) + 1))))
+			if (!s || (!(a[i] = (char *)malloc(sizeof(char) * cc(s, c) + 1))))
 				return (NULL);
 			while (*s != c && *s)
-				splits[i][j++] = (char)*s++;
-			splits[i][j] = '\0';
+				a[i][j++] = (char)*s++;
+			a[i][j] = '\0';
 			i++;
 			j = 0;
 		}
 	}
-	splits[i] = NULL;
-	return (splits);
+	a[i] = NULL;
+	return (a);
 }
