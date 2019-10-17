@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 15:25:04 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 15:26:08 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:27:11 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
+	if (!s)
+		return ;
 	ft_putstr(s);
 	ft_putchar('\n');
 }

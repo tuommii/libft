@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 14:09:23 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 10:54:11 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:26:53 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,7 @@
 
 void	ft_putstr(char const *s)
 {
+	if (!s)
+		return ;
 	write(1, s, ft_strlen(s));
 }

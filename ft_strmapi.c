@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 12:04:30 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 13:12:08 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/17 10:57:42 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	len = ft_strlen((char *)s);
-	if (!(fresh = (char *)malloc(sizeof(char) * len)))
+	if (!(fresh = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	i = 0;
 	while (i < len)
@@ -30,5 +30,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		fresh[i] = (*f)(i, (char)s[i]);
 		i++;
 	}
+	fresh[len] = '\0';
 	return (fresh);
 }

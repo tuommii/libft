@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 13:29:37 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/16 13:38:31 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:10:59 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
-	size_t	len;
+	char	*dest;
+	int		i;
 
-	if (!s1 && !s2)
+	i = 0;
+	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(str = ft_memalloc(len)))
+	dest = ft_memalloc(sizeof(*dest) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (dest == NULL)
 		return (NULL);
-	ft_strcpy(str, (char *)s1);
-	str = ft_strcat(str, (char *)s2);
-	return (str);
+	while (*s1)
+		dest[i++] = *s1++;
+	while (*s2)
+		dest[i++] = *s2++;
+	dest[i] = '\0';
+	return (dest);
 }
