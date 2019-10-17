@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 08:38:22 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/17 08:54:37 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/10/17 08:55:18 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/10/17 09:16:52 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
+	t_list *res;
+	t_list *head;
+	t_list *node;
+
 	if (!lst || !f)
-		return ;
-	while (lst != NULL)
+		return (NULL);
+	node = f(lst);
+	if (!(res = ft_lstnew(node->content, node->content_size)))
+		return (NULL);
+	lst = lst->next;
+	head = res;
+	while (lst)
 	{
-		f(lst);
+		node = NULL;
+		node = f(lst);
+		if (!(res->next = ft_lstnew(node->content, node->content_size)))
+			return (NULL);
+		res = res->next;
 		lst = lst->next;
 	}
+	return (head);
 }
