@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/19 09:59:18 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/19 11:51:06 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,18 @@
 
 # define FT_MIN(x, y) (x) < (y) ? (x) : (y)
 # define FT_MAX(x, y) (x) > (y) ? (x) : (y)
-# define ABS(Value)  (Value < 0) ? -Value:Value
-# define ARR_ELEMS(arr) ((int) (sizeof(arr) / sizeof(arr[0][0])))
-# define ARR_ROWS(arr) ((int) (sizeof(arr) / sizeof(arr[0])))
-# define ARR_COLS(arr) ((int) (sizeof(arr[0]) / sizeof(arr[0][0])))
+# define FT_ABS(Value)  (Value < 0) ? -Value:Value
+
+# define FT_ARR_ELEMS(arr) ((int) (sizeof(arr) / sizeof(arr[0][0])))
+# define FT_ARR_ROWS(arr) ((int) (sizeof(arr) / sizeof(arr[0])))
+# define FT_ARR_COLS(arr) ((int) (sizeof(arr[0]) / sizeof(arr[0][0])))
+
+# define FT_RED "\x1B[0;31m"
+# define FT_GREEN "\x1B[0;32m"
+# define FT_YELLOW "\x1B[0;33m"
+# define FT_BLUE "\x1B[0;34m"
+# define FT_RESET "\x1B[0m"
+
 # define FALSE 0
 # define TRUE 1
 
