@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/19 08:47:27 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/19 09:59:18 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # define FT_MIN(x, y) (x) < (y) ? (x) : (y)
 # define FT_MAX(x, y) (x) > (y) ? (x) : (y)
 # define ABS(Value)  (Value < 0) ? -Value:Value
+# define ARR_ELEMS(arr) ((int) (sizeof(arr) / sizeof(arr[0][0])))
+# define ARR_ROWS(arr) ((int) (sizeof(arr) / sizeof(arr[0])))
+# define ARR_COLS(arr) ((int) (sizeof(arr[0]) / sizeof(arr[0][0])))
 # define FALSE 0
 # define TRUE 1
 
@@ -91,7 +94,6 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 char				*ft_strrev(char *s);
 size_t				ft_strlen_char(const char *s, char c);
-
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
