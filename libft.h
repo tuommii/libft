@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/10/17 09:18:41 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/10/19 08:47:27 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,9 @@ char				*ft_itoa(int n);
 int					ft_isspace(char c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
+char				*ft_strrev(char *s);
+size_t				ft_strlen_char(const char *s, char c);
+
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
