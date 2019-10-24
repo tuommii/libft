@@ -76,14 +76,15 @@ ft_lstadd.c \
 ft_lstiter.c \
 ft_lstmap.c \
 ft_strrev.c \
-ft_strlen_char.c
+ft_strlen_char.c \
+get_next_line.c
 
 OBJECTS	= $(SOURCE_LIST:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(CFLAGS) -c $(SOURCE_LIST) -I .
+	gcc $(CFLAGS) -c $(SOURCE_LIST) -I includes/
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
