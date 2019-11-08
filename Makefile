@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/11/08 05:50:01 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/11/08 09:23:16 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ ft_lstadd.c \
 ft_lstiter.c \
 ft_lstmap.c \
 ft_lstreverse.c \
+ft_lstcount.c \
 ft_strrev.c \
 ft_strlen_char.c \
 get_next_line.c
