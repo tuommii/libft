@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:38:57 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/16 09:46:56 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ char				*ft_chpush(char *str, char c, int len);
 char				*ft_digits_left(char *str, int len);
 char				*ft_pad_left(char *str, int total_width, char c);
 char				*ft_pad_right(char *str, int total_width, char c);
+char				*ft_cut_left(char *str, int n);
 
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
