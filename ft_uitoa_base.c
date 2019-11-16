@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digits_only.c                             :+:      :+:    :+:   */
+/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 09:14:27 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:26:48 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/11/16 09:23:26 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/11/16 09:28:47 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_digits_only(uintmax_t n, int base)
+char	*ft_uitoa_base(uintmax_t n, unsigned int base, const char *symbols, size_t precision)
 {
-	size_t i;
+	size_t	count;
+	char	*str;
 
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n)
+	count = ft_count_digits_only(n, base);
+	if (count < precision)
+		count = precision;
+	if (!(str = ft_memalloc(count + 1)))
+		return (NULL);
+	while (count > 0)
 	{
-		i++;
+		str[count - 1] = symbols[n % base];
+		count--;
 		n /= base;
 	}
-	return (i);
+	return (str);
 }

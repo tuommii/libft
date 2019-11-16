@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:20:00 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/16 09:29:34 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,9 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 
 
-int					ft_count_digits_only(uintmax_t n, int base);
-int					count_digits_and_sign(intmax_t n, int base);
+size_t				ft_count_digits_only(uintmax_t n, int base);
+size_t				count_digits_and_sign(intmax_t n, int base);
+char				*ft_uitoa_base(uintmax_t n, unsigned int base, const char *symbols, size_t precision);
 char				*ft_chappend(char *str, char c, int len);
 char				*ft_chpush(char *str, char c, int len);
 char				*ft_digits_left(char *str, int len);

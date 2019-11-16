@@ -6,13 +6,13 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:19:06 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:20:21 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/16 09:30:27 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits_and_sign(intmax_t n, int base)
+size_t	count_digits_and_sign(intmax_t n, int base)
 {
 	int count;
 

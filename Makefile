@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/11/16 09:18:34 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/11/16 09:29:51 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,7 @@ ft_chappend.c \
 ft_chpush.c \
 ft_count_digits_only.c \
 ft_count_digits_and_sign.c \
+ft_uitoa_base.c \
 get_next_line.c
 
 OBJECTS	= $(SOURCE_LIST:.c=.o)
