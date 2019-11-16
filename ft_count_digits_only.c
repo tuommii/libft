@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chpush.c                                        :+:      :+:    :+:   */
+/*   ft_count_digits_only.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 09:05:04 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:16:29 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/11/16 09:14:27 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/11/16 09:16:17 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_chpush(char *str, char c, int len)
+int	ft_count_digits_only(uintmax_t n, int base)
 {
-	char *new;
+	int count;
 
-	if (!(new = ft_memalloc(len + 2)))
-		return (NULL);
-	new++;
-	ft_strcpy(new, str);
-	new[0] = c;
-	new[len + 1] = '\0';
-	return (new);
+	if (n == 0)
+		return (1);
+	count = 0;
+	while (n != 0)
+	{
+		count++;
+		n /= base;
+	}
+	return (count);
 }
