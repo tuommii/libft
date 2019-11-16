@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digits_and_sign.c                         :+:      :+:    :+:   */
+/*   ft_pad_right.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 09:19:06 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:38:37 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/11/16 09:35:04 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/11/16 09:37:57 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_digits_and_sign(intmax_t n, int base)
+char	*ft_pad_right(char *str, int total_width, char c)
 {
-	int count;
+	int		i;
+	int		len;
+	char	*new;
 
-	count = ft_count_digits_only((uintmax_t)n, base);
-	if (n < 0)
-		count++;
-	return (count);
+	len = ft_strlen(str);
+	if (len >= total_width)
+		return (str);
+	new = ft_strnew(total_width);
+	i = 0;
+	while (i < len)
+		new[i++] = *str++;
+	while (i < total_width)
+		new[i++] = c;
+	return (new);
 }
