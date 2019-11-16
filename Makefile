@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/11/16 15:53:25 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/11/16 19:48:05 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,8 +80,6 @@ ft_lstcount.c \
 ft_strrev.c \
 ft_strlen_char.c \
 ft_digits_left.c \
-ft_chappend.c \
-ft_chpush.c \
 ft_count_digits_only.c \
 ft_count_digits_and_sign.c \
 ft_uitoa_base.c \
