@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex_left.c                                      :+:      :+:    :+:   */
+/*   ft_spaces_to_right.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 15:50:53 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 15:52:51 by mtuomine         ###   ########.fr       */
+/*   Created: 2019/11/16 09:05:56 by mtuomine          #+#    #+#             */
+/*   Updated: 2019/11/17 10:08:00 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_hex_left(char *str, int len, int inc_x)
+char *ft_spaces_to_right(char *str, int len)
 {
 	char temp[len + 1];
 
@@ -25,7 +25,7 @@ char *ft_hex_left(char *str, int len, int inc_x)
 		i++;
 		j--;
 	}
-	while (str[i] && ft_ishex(str[i], inc_x))
+	while ((str[i] && !ft_isspace(str[i])))
 	{
 		temp[k] = str[i];
 		i++;
