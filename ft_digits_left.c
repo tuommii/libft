@@ -6,13 +6,13 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:05:56 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:07:13 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/17 08:20:24 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_digits_left(char *str, int len)
+char *ft_digits_left(char *str, int len, int inc_dot)
 {
 	char temp[len + 1];
 
@@ -25,7 +25,7 @@ char *ft_digits_left(char *str, int len)
 		i++;
 		j--;
 	}
-	while (str[i] && ft_isdigit(str[i]))
+	while ((str[i] && ft_isdigit(str[i])) || (inc_dot && str[i] == '.'))
 	{
 		temp[k] = str[i];
 		i++;
