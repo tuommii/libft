@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/17 10:09:21 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/18 09:26:35 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ int					ft_ishex(int c, int include_x);
 
 size_t				ft_count_digits_only(uintmax_t n, int base);
 size_t				ft_count_digits_and_sign(intmax_t n, int base);
-char				*ft_uitoa_base(uintmax_t n, unsigned int base, const char *symbols, size_t precision);
+char				*ft_uitoa_base(uintmax_t n, unsigned int base, \
+					const char *symbols, size_t precision);
 char				*ft_spaces_to_right(char *str, int len);
 char				*ft_pad_left(char *str, int total_width, char c);
 char				*ft_pad_right(char *str, int total_width, char c);

@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:43:33 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:46:54 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/18 09:28:56 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_cut_left(char *str, int n)
 {
-	int len;
-	int i;
-	char *new;
+	int		len;
+	int		i;
+	char	*new;
 
 	len = ft_strlen(str);
 	if (n >= len)

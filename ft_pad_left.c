@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:35:09 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:39:11 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/18 09:28:42 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_pad_left(char *str, int total_width, char c)
 {
-	int i;
-	int len;
-	char *new;
+	int		i;
+	int		len;
+	char	*new;
 
 	len = ft_strlen(str);
 	if (len >= total_width)

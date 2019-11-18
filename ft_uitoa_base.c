@@ -6,13 +6,14 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:23:26 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/16 09:28:47 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/18 09:26:10 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_uitoa_base(uintmax_t n, unsigned int base, const char *symbols, size_t precision)
+char	*ft_uitoa_base(uintmax_t n, unsigned int base, \
+const char *symbols, size_t precision)
 {
 	size_t	count;
 	char	*str;

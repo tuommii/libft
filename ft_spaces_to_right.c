@@ -6,19 +6,22 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:05:56 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/17 10:08:00 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/18 09:28:17 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_spaces_to_right(char *str, int len)
+char	*ft_spaces_to_right(char *str, int len)
 {
-	char temp[len + 1];
+	char	temp[len + 1];
+	int		i;
+	int		j;
+	int		k;
 
-	int i = 0;
-	int j = len - 1;
-	int k = 0;
+	i = 0;
+	j = len - 1;
+	k = 0;
 	while (str[i] && ft_isspace(str[i]))
 	{
 		temp[j] = str[i];
