@@ -1,39 +1,63 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_spaces_to_right.c                               :+:      :+:    :+:   */
+/*   ft_invert_padding.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:05:56 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/18 09:28:17 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/20 12:16:42 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_spaces_to_right(char *str, int len)
+static void create_inv(char *dest, char *src,  int right_pad, int num_size)
 {
-	char	temp[len + 1];
-	int		i;
-	int		j;
-	int		k;
+	int i;
+	int j;
+	int len;
 
 	i = 0;
-	j = len - 1;
-	k = 0;
-	while (str[i] && ft_isspace(str[i]))
+	j = 0;
+	len = ft_strlen(dest);
+	while (i < len)
 	{
-		temp[j] = str[i];
+		if (i < right_pad)
+			dest[i] = ' ';
+		if (i >= right_pad && i < (right_pad + num_size))
+		{
+			dest[i] = src[j];
+			j++;
+		}
 		i++;
-		j--;
 	}
+	dest[len] = '\0';
+}
+
+char	*ft_invert_padding(char *str, int len)
+{
+	char	*temp;
+	char	num[len + 1];
+	int		i;
+	int		k;
+	int		left_pad;
+
+	temp = ft_strnew(len);
+	i = 0;
+	k = 0;
+	left_pad = 0;
+	ft_memset(temp, ' ', len);
+	while (str[i] && ft_isspace(str[i]))
+		i++;
+	left_pad = i;
 	while ((str[i] && !ft_isspace(str[i])))
 	{
 		temp[k] = str[i];
+		num[k] = str[i];
 		i++;
 		k++;
 	}
-	temp[len] = '\0';
-	return (ft_strdup(temp));
+	create_inv(temp, num, len - ((i - left_pad) + left_pad), i - left_pad);
+	return (temp);
 }

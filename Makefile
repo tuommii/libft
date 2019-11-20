@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/11/17 10:09:48 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/11/20 11:59:16 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ ft_lstreverse.c \
 ft_lstcount.c \
 ft_strrev.c \
 ft_strlen_char.c \
-ft_spaces_to_right.c \
+ft_invert_padding.c \
 ft_count_digits_only.c \
 ft_count_digits_and_sign.c \
 ft_uitoa_base.c \
