@@ -6,13 +6,13 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 09:05:56 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/20 12:16:42 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/11/28 10:48:01 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void create_inv(char *dest, char *src,  int right_pad, int num_size)
+static void	create_inv(char *dest, char *src, int right_pad, int num_size)
 {
 	int i;
 	int j;
@@ -35,7 +35,7 @@ static void create_inv(char *dest, char *src,  int right_pad, int num_size)
 	dest[len] = '\0';
 }
 
-char	*ft_invert_padding(char *str, int len)
+char		*ft_invert_padding(char *str, int len)
 {
 	char	*temp;
 	char	num[len + 1];
