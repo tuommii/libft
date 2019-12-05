@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/11/20 11:59:16 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/12/05 08:19:58 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,25 @@ ft_pad_left.c \
 ft_pad_right.c \
 ft_cut_left.c \
 ft_ishex.c \
-get_next_line.c
+get_next_line.c \
+ft_printf.c \
+pf_write.c \
+pf_args.c \
+pf_parsers.c \
+pf_ftoa.c \
+pf_pad_cut.c \
+pf_print_hex.c \
+pf_print_uint.c \
+pf_print_percent.c \
+pf_print_decimal.c \
+pf_print_char.c \
+pf_print_float.c \
+pf_print_pointer.c \
+pf_print_octal.c \
+pf_flags.c \
+pf_print_string.c \
+pf_print_binary.c
+
 
 OBJECTS	= $(SOURCE_LIST:.c=.o)
 
