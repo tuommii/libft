@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/11/20 11:59:29 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/05 06:42:47 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,13 @@
 # include <string.h>
 # include <stdint.h>
 
-# define FT_MIN(x, y) (x) < (y) ? (x) : (y)
-# define FT_MAX(x, y) (x) > (y) ? (x) : (y)
-# define FT_ABS(Value)  (Value < 0) ? -Value:Value
-
-# define FT_ARR_ELEMS(arr) ((int) (sizeof(arr) / sizeof(arr[0][0])))
-# define FT_ARR_ROWS(arr) ((int) (sizeof(arr) / sizeof(arr[0])))
-# define FT_ARR_COLS(arr) ((int) (sizeof(arr[0]) / sizeof(arr[0][0])))
-
 # define FT_RED "\x1B[0;31m"
 # define FT_GREEN "\x1B[0;32m"
 # define FT_YELLOW "\x1B[0;33m"
 # define FT_BLUE "\x1B[0;34m"
+# define FT_BOLD_BLUE "\x1B[1;34m"
+# define FT_MAGENTA "\x1B[0;35m"
+# define FT_CYAN "\x1B[0;36m"
 # define FT_RESET "\x1B[0m"
 
 # define FALSE 0
