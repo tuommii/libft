@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/10 21:18:36 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/10 21:48:22 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdint.h>
+# include <limits.h>
 
 # define FT_RED "\x1B[0;31m"
 # define FT_GREEN "\x1B[0;32m"
@@ -36,6 +37,20 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_hash
+{
+	char *key;
+	char *value;
+	struct s_hash *next;
+} 					t_hash;
+
+typedef struct		s_hashtable
+{
+	size_t	size;
+	size_t	count;
+	t_hash **items;
+} 					t_hashtable;
 
 void				*ft_memset(void *s, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
