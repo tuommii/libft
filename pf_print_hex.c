@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex.c                                        :+:      :+:    :+:   */
+/*   pf_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 20:56:40 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/05 06:40:12 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/06 16:15:04 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	handle_prec(t_printf *p, char **str, uintmax_t n)
 	}
 }
 
-static int pf_max(int a, int b)
+static int	pf_max(int a, int b)
 {
 	if (b > a)
 		return (b);
