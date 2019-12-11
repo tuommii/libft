@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/11 09:22:04 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/11 09:30:21 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,7 @@ char				*ft_strjoinch(char const *s1, char c);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 int 				ft_endswith(char *str, char *end);
+char				*ft_pathjoin(char *a, char *b);
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
