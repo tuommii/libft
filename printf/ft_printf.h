@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 22:37:15 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/11 08:16:07 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/11 08:48:44 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 # include <stddef.h>
-# include "../libft/includes/libft.h"
+# include "../libft.h"
 
 # define FLAGS "-+ #0"
 # define OPTIONALS "#-+ .*0123456789hljztL"

@@ -6,13 +6,12 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/12/05 08:19:58 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/12/11 08:47:45 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
-CFLAGS		= -Wall -Wextra -Werror
-SOURCE_LIST	= ft_memset.c \
+LIBFT_SRC	=	ft_memset.c \
 ft_putchar.c \
 ft_strlen.c \
 ft_putstr.c \
@@ -86,9 +85,13 @@ ft_uitoa_base.c \
 ft_pad_left.c \
 ft_pad_right.c \
 ft_cut_left.c \
-ft_ishex.c \
-get_next_line.c \
-ft_printf.c \
+ft_ishex.c
+
+GNL_PATH = gnl/
+GNL_SRC = get_next_line.c
+
+PRINTF_PATH = printf/
+PRINTF_SRC = ft_printf.c \
 pf_write.c \
 pf_args.c \
 pf_parsers.c \
@@ -107,15 +110,24 @@ pf_print_string.c \
 pf_print_binary.c
 
 
-OBJECTS	= $(SOURCE_LIST:.c=.o)
+OBJECTS	+= $(LIBFT_SRC:.c=.o)
+OBJECTS += $(addprefix $(GNL_PATH),$(GNL_SRC:.c=.o))
+OBJECTS += $(addprefix $(PRINTF_PATH),$(PRINTF_SRC:.c=.o))
+
+CFLAGS		= -Wall -Wextra -Werror
+CLEAR_LINE = \033[2K\c
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(CFLAGS) -c $(SOURCE_LIST) -I includes/
+$(NAME): $(OBJECTS)
+	echo "\nCreating $@"
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
+%.o: %.c
+	@echo "$(CLEAR_LINE)"
+	@echo "Compiling $<\r\c"
+	@gcc $(CFLAGS) -c $< -o $@
 
 main: all
 	gcc $(FLAGS) -I . -c main.c

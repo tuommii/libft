@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 09:40:21 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/05 06:31:03 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/11 08:15:10 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,28 @@ int			ft_printf(const char *format, ...)
 		p.bytes = write(p.fd, format, ft_strlen(format));
 	else
 	{
-		if (pf_parse_format_string(format, &p, args) == -1)
+		if (pf_parse_format_string(p.fd, format, &p, args) == -1)
+			p.bytes = -1;
+	}
+	va_end(args);
+	return (p.bytes);
+}
+
+int			ft_dprintf(int fd, const char *format, ...)
+{
+	t_printf	p;
+	va_list		args;
+
+	ft_bzero(&p, sizeof(p));
+	pf_reset_struct(&p);
+	p.fd = fd;
+	p.bytes = 0;
+	va_start(args, format);
+	if (!ft_strchr(format, '%'))
+		p.bytes = write(p.fd, format, ft_strlen(format));
+	else
+	{
+		if (pf_parse_format_string(p.fd, format, &p, args) == -1)
 			p.bytes = -1;
 	}
 	va_end(args);

@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 09:49:19 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/06 16:14:31 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/11 08:12:31 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,7 @@ static int	parse_optionals(const char *str, t_printf *p, va_list args)
 	return (0);
 }
 
-int			pf_parse_format_string(const char *format,\
-		t_printf *p, va_list args)
+int			pf_parse_format_string(int fd, const char *format, t_printf *p, va_list args)
 {
 	while (format[p->i] != '\0' && p->bytes != -1)
 	{
@@ -73,8 +72,8 @@ int			pf_parse_format_string(const char *format,\
 		p->i++;
 	}
 	if (p->bytes == -1)
-		p->bytes += write(1, p->cpy, p->i);
+		p->bytes += write(fd, p->cpy, p->i);
 	else
-		p->bytes += write(1, p->cpy, p->buff_i);
+		p->bytes += write(fd, p->cpy, p->buff_i);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/10 21:48:22 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/11 08:50:23 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,5 +135,6 @@ size_t				ft_lstcount(t_list *list);
 
 int					get_next_line(const int fd, char **line);
 int					ft_printf(const char *format, ...);
+int					ft_dprintf(int fd, const char *format, ...);
 
 #endif
