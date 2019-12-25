@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/11 09:30:21 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/25 23:22:41 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,21 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+
+typedef struct		s_lens
+{
+	int				len_org;
+	int				len_rep;
+	int				len_with;
+	int				delta;
+	int				count;
+}					t_lens;
+
 typedef struct		s_hash
 {
-	char *key;
-	char *value;
-	struct s_hash *next;
+	char			*key;
+	char			*value;
+	struct s_hash	*next;
 } 					t_hash;
 
 typedef struct		s_hashtable
@@ -126,6 +136,7 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 char				*ft_strrev(char *s);
 size_t				ft_strlen_char(const char *s, char c);
+char				*ft_strreplace(char *org, char *rep, char *with);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));

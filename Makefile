@@ -6,7 +6,7 @@
 #    By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/15 12:40:34 by mtuomine          #+#    #+#              #
-#    Updated: 2019/12/11 09:30:40 by mtuomine         ###   ########.fr        #
+#    Updated: 2019/12/25 23:25:17 by mtuomine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ ft_strnequ.c \
 ft_strsub.c \
 ft_strjoin.c \
 ft_strjoinch.c \
+ft_strreplace.c \
 ft_endswith.c \
 ft_pathjoin.c \
 ft_strtrim.c \
