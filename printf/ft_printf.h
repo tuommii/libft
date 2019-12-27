@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 22:37:15 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/11 08:48:44 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/27 12:28:45 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ void			pf_parse_length(const char *str, t_printf *p);
 void			pf_parse_width(const char *str, t_printf *p, va_list args);
 void			pf_parse_precision(const char *str, t_printf *p, va_list args);
 void			pf_parse_flags(const char *s, t_printf *p);
-int				pf_parse_format_string(int fd, const char *format, t_printf *p, \
+int				pf_parse_format_string(int fd, \
+const char *format, t_printf *p, \
 				va_list args);
 
 /*

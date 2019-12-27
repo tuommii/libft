@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/25 23:05:49 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/25 23:49:51 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/27 12:36:46 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,21 @@
 static int	set_lens(t_lens *lens, char *org, char *rep, char *with)
 {
 	lens->len_org = ft_strlen(org);
-	lens->len_rep= ft_strlen(rep);
-	lens->len_with= ft_strlen(with);
+	lens->len_rep = ft_strlen(rep);
+	lens->len_with = ft_strlen(with);
 	lens->count = 0;
-
 	if (lens->len_org == 0 || lens->len_rep == 0)
 		return (1);
 	return (0);
+}
+
+static char	*allocate_mem(t_lens lens)
+{
+	char *res;
+
+	res = (char *)ft_memalloc(sizeof(char) * \
+	(lens.len_org + (lens.len_with - lens.len_rep) * lens.count + 1));
+	return (res);
 }
 
 char		*ft_strreplace(char *org, char *rep, char *with)
@@ -39,7 +47,7 @@ char		*ft_strreplace(char *org, char *rep, char *with)
 		ins = temp + lens.len_rep;
 		lens.count++;
 	}
-	res = (char *)ft_memalloc(sizeof(char) * (lens.len_org + (lens.len_with - lens.len_rep) * lens.count + 1));
+	res = allocate_mem(lens);
 	temp = res;
 	while (lens.count--)
 	{

@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 09:49:19 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/11 08:12:31 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/27 12:38:25 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ static int	parse_optionals(const char *str, t_printf *p, va_list args)
 	return (0);
 }
 
-int			pf_parse_format_string(int fd, const char *format, t_printf *p, va_list args)
+int			pf_parse_format_string(int fd,\
+const char *format, t_printf *p, va_list args)
 {
 	while (format[p->i] != '\0' && p->bytes != -1)
 	{

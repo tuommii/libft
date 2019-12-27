@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2019/12/25 23:22:41 by mtuomine         ###   ########.fr       */
+/*   Updated: 2019/12/27 12:30:37 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-
 typedef struct		s_lens
 {
 	int				len_org;
@@ -53,14 +52,14 @@ typedef struct		s_hash
 	char			*key;
 	char			*value;
 	struct s_hash	*next;
-} 					t_hash;
+}					t_hash;
 
-typedef struct		s_hashtable
+typedef	struct		s_hashtable
 {
-	size_t	size;
-	size_t	count;
-	t_hash **items;
-} 					t_hashtable;
+	size_t			size;
+	size_t			count;
+	t_hash			**items;
+}					t_hashtable;
 
 void				*ft_memset(void *s, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -118,7 +117,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strjoinch(char const *s1, char c);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-int 				ft_endswith(char *str, char *end);
+int					ft_endswith(char *str, char *end);
 char				*ft_pathjoin(char *a, char *b);
 
 void				ft_putchar(char c);
