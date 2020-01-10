@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2020/01/10 09:02:34 by mtuomine         ###   ########.fr       */
+/*   Updated: 2020/01/10 10:42:18 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,7 @@ t_list				*ft_lstreverse(t_list *list);
 size_t				ft_lstcount(t_list *list);
 
 int					ft_tabelems(char **tab);
+void				ft_free_arr(char **arr);
 
 int					get_next_line(const int fd, char **line);
 int					ft_printf(const char *format, ...);
