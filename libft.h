@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2020/01/10 10:42:18 by mtuomine         ###   ########.fr       */
+/*   Updated: 2020/01/14 16:42:19 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,8 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstreverse(t_list *list);
 size_t				ft_lstcount(t_list *list);
+void				ft_lstdelat(t_list **lst, int index,\
+					void (*del)(void*, size_t));
 
 int					ft_tabelems(char **tab);
 void				ft_free_arr(char **arr);
