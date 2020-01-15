@@ -148,7 +148,7 @@ size_t				ft_lstcount(t_list *list);
 void				ft_lstdelat(t_list **lst, int index,\
 					void (*del)(void*, size_t));
 
-int					ft_tabelems(char **tab);
+int					ft_tabelems(char **arr);
 void				ft_free_arr(char **arr);
 
 int					get_next_line(const int fd, char **line);

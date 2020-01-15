@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tabelems(char **tab)
+int	ft_tabelems(char **arr)
 {
 	int i;
 
 	i = 0;
-	if (!tab)
+	if (!arr)
 		return (0);
-	while (tab[i])
+	while (arr[i])
 		i++;
 	return (i);
 }
