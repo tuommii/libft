@@ -6,7 +6,7 @@
 /*   By: mtuomine <mtuomine@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 12:46:45 by mtuomine          #+#    #+#             */
-/*   Updated: 2020/01/14 16:42:19 by mtuomine         ###   ########.fr       */
+/*   Updated: 2020/01/16 22:24:26 by mtuomine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,7 @@ void				ft_lstdelat(t_list **lst, int index,\
 
 int					ft_tabelems(char **arr);
 void				ft_free_arr(char **arr);
+void				ft_insert(char *str, int pos, char c);
 
 int					get_next_line(const int fd, char **line);
 int					ft_printf(const char *format, ...);
