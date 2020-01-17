@@ -28,6 +28,7 @@ void	ft_insert(char *str, int pos, char c)
 			str[i] = str[i + 1];
 			i++;
 		}
+		str[len] = '\0';
 		return ;
 	}
 	i = len;
